@@ -1,0 +1,195 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #faffff;
+	font: bold 24px Calibri;
+	display: flex;
+	justify-content: center;
+	padding-top: 100px;
+}
+
+.carousel {
+	width: 940px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.carousel .preview {
+	display: flex;
+}
+
+.carousel .preview .content {
+	overflow: hidden;
+	width: 860px;
+	height: 400px;
+}
+
+.carousel .preview .content .scroller {
+	display: flex;
+	height: inherit;
+	transition: 200ms linear;
+}
+
+.carousel .preview .content figure {
+	width: 860px;
+	height: 400px;
+	position: relative;
+}
+
+.carousel .preview .content figure img {
+	width: inherit;
+	height: inherit;
+}
+
+.carousel .preview .content figure figcaption {
+	min-width: 285px;
+	height: 60px;
+	padding: 20px;
+	background: linear-gradient(to right, rgba(0,0,0,0.5) 0%,rgba(0,0,0,0) 100%);
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	font: bold 24px/20px Calibri;
+	color: #fff;
+}
+
+.carousel .preview button {
+	width: 40px;
+	height: auto;
+	position: relative;
+	background: none;
+	border: none;
+	outline: none;
+	cursor: pointer;
+}
+
+.carousel .preview button:hover {
+	background: rgba(0, 0, 0, 0.03);
+}
+
+.carousel .preview button:active {
+	background: rgba(0, 0, 0, 0.05);
+}
+
+.carousel .preview button:after {
+	content: '';
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	border-left: 2px solid #696969;
+	border-bottom: 2px solid #696969;
+	top: 45%;
+	left: 0;
+}
+
+.carousel .preview button.nav_prev:after {
+	transform: rotate(45deg);
+	left: 13px;
+}
+
+.carousel .preview button.nav_next:after {
+	transform: rotate(225deg);
+}
+
+.carousel .thumbnails {
+	width: 860px;
+	height: 100px;
+	overflow-y: hidden;
+	display: flex;
+	align-items: center;
+	margin-top: 15px;
+	padding: 5px 0;
+}
+
+.carousel .thumbnails::-webkit-scrollbar {
+	height: 5px;
+}
+
+.carousel .thumbnails::-webkit-scrollbar-track {
+	height: 5px;
+	background: #eee;
+}
+
+.carousel .thumbnails::-webkit-scrollbar-thumb {
+	height: 5px;
+	background: #bbb;
+	border-radius: 3px;
+}
+
+.carousel .thumbnails .thumbnail {
+	width: 80px;
+	height: 80px;
+	margin: 8px;
+	border: 2px solid #acacac;
+	box-sizing: content-box;
+	cursor: pointer;
+}
+
+.carousel .thumbnails .thumbnail.active {
+	border: 2px solid #4596d5;
+	transform: scale(1.1);
+}
+
+.carousel .thumbnails .thumbnail:last-of-type {
+	margin-right: 0;
+}
+
+.carousel .thumbnails .thumbnail img {
+	width: inherit;
+	height: inherit;
+}
+
+.controls{
+	margin: 10px 40px;
+	width: 410px;
+}
+.controls h3{
+	color: #353f3f;
+}
+.controls form{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.controls form input{
+	height: 40px;
+	width: 100%;
+	border: 1px solid #a9a9a9;
+	padding-left: 22px;
+	outline: none;
+	margin-bottom: 10px;
+	font: 100 24px/20px Calibri;
+}
+.controls form input::-webkit-input-placeholder {
+	color: #353f3f;
+	font: 100 24px/20px Calibri;
+}
+.controls form .add-item{
+	margin: 10px 0 20px;
+	width: 150px;
+	height: 40px;
+	background: #fff;
+	border: 1px solid #000;
+	border-radius: 2px;
+	color: #4d4c4c;
+	font: bold 24px/20px Calibri;
+	cursor: pointer;
+	outline: none;
+}
+.controls .remove-item{
+	width: 100%;
+	height: 40px;
+	background: #d96f28;
+	border-radius: 3px;
+	color: #fff;
+	border: none;
+	border-bottom: 3px solid #994811;
+	font: bold 24px/20px Calibri;
+	cursor: pointer;
+	outline: none;
+}
