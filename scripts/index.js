@@ -1,7 +1,7 @@
 var fs = new FileAPI();
 
 document.addEventListener('DOMContentLoaded', function(){
-	var carousel, carousel2,
+	var carousel,
 		addForm = document.getElementsByTagName('form')[0],
 		removeButton = document.getElementsByClassName('remove-item')[0];
 

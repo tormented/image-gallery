@@ -6,7 +6,7 @@
 	FileAPI.prototype.init = function(){
 		var that = this;
 		return new Promise(function(resolve, reject){
-			window.webkitRequestFileSystem(window.TEMPORARY, 1024 * 1024 * 1024 * 1024 * 1024, function(fs){
+			window.webkitRequestFileSystem(window.TEMPORARY, 1024 * 1024 * 10, function(fs){
 				that.rootPath = fs.root.toURL();
 				that.rootEntry = fs.root;
 				resolve()
